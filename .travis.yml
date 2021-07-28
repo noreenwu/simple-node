@@ -19,8 +19,8 @@ script:
    - docker tag simple-node noreenwu/simple-node:latest
 
 after_success:
-   - echo $DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" -- password-stdin
-   - docker push simple-node noreenwu/simple-node
+   - echo $DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+   - docker push noreenwu/simple-node
 
 #deploy:
    
